@@ -71,8 +71,16 @@ img {
   background-color: $accent-color;
   color: $white-color;
   cursor: pointer;
-  width: 200px;
-  height: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+  min-height: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+  min-height: 50px;
   border-radius: 4px;
   font-family: inherit;
   font-weight: 700;

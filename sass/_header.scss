@@ -17,20 +17,21 @@
     position: fixed;
     top: 0;
     left: 0;
-    display: none;
-    max-width: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateX(100%);
+    width: 100vw;
     height: 100vh;
     z-index: 2;
 
     padding: 48px 40px;
     font-size: 40px;
-    line-height: 1.175;
+    line-height: 1.17;
     letter-spacing: 0.02em;
-
+    transition: transform $transition;
     &.is-open {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      transform: translateX(0);
     }
   }
   @media screen and (min-width: 768px) {
@@ -50,7 +51,7 @@
   padding: 0;
   border: none;
   cursor: pointer;
-  z-index: 99;
+  z-index: 5;
   top: -4px;
   right: 28px;
   background-color: transparent;
@@ -60,6 +61,11 @@
   &:hover,
   &:focus {
     fill: #2196f3;
+  }
+  &.is-open .menu__button--icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
   }
 }
 

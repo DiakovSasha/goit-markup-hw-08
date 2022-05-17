@@ -1,17 +1,40 @@
 .footer {
   background-color: #2f303a;
-  width: 100%;
+
   &__logo-in {
-    grid-area: first;
-    @media screen and (max-width: 767px) {
-      margin-bottom: 60px;
+    margin-bottom: 60px;
+    @media screen and (max-width: 1200px) {
+      width: 100%;
+    }
+    @media screen and (min-width: 768px) {
+      // margin-bottom: 60px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 0;
+      margin-right: 70px;
     }
   }
   &__box {
-    margin: 0 auto 60px auto;
+    margin-bottom: 60px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    @media screen and (max-width: 1200px) {
+      width: 100%;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 0;
+      margin-right: 70px;
+    }
   }
+  &__form {
+    @media screen and (max-width: 1200px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
   .wrapper__footer {
     display: flex;
     flex-direction: column;
@@ -20,7 +43,13 @@
 
     @media screen and (min-width: 768px) {
       flex-direction: row;
-      justify-content: space-between;
+
+      align-items: baseline;
+    }
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+
+      text-align: start;
     }
   }
   &__title {
@@ -37,8 +66,9 @@
     display: flex;
   }
   &__input {
+    max-width: 450px;
     width: 100%;
-    padding: 15px 16px;
+    padding: 14px 16px;
     margin-right: 12px;
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -47,6 +77,7 @@
     font-size: 16px;
     line-height: 1.25;
     letter-spacing: 0.03em;
+    margin-bottom: 20px;
 
     color: rgba(255, 255, 255, 0.6);
     @media screen and (max-width: 767px) {
@@ -58,12 +89,6 @@
     @media screen and (min-width: 1200px) {
       width: 358px;
     }
-  }
-
-  &__form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 
   &__socials {
@@ -89,6 +114,10 @@
 }
 .contacts {
   padding: 60px 0;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+  }
 }
 .address {
   margin-top: 20px;
@@ -118,7 +147,6 @@
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
 
   padding: 13px 28px;
   width: 200px;

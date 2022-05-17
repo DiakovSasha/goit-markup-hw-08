@@ -81,8 +81,16 @@ img {
   background-color: #2196f3;
   color: #ffffff;
   cursor: pointer;
-  width: 200px;
-  height: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+  min-height: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+  min-height: 50px;
   border-radius: 4px;
   font-family: inherit;
   font-weight: 700;
@@ -153,19 +161,21 @@ img {
     position: fixed;
     top: 0;
     left: 0;
-    display: none;
-    max-width: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateX(100%);
+    width: 100vw;
     height: 100vh;
     z-index: 2;
     padding: 48px 40px;
     font-size: 40px;
-    line-height: 1.175;
+    line-height: 1.17;
     letter-spacing: 0.02em;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .header__wrapper.is-open {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    transform: translateX(0);
   }
 }
 
@@ -186,7 +196,7 @@ img {
   padding: 0;
   border: none;
   cursor: pointer;
-  z-index: 99;
+  z-index: 5;
   top: -4px;
   right: 28px;
   background-color: transparent;
@@ -200,6 +210,12 @@ img {
 
 .menu:hover, .menu:focus {
   fill: #2196f3;
+}
+
+.menu.is-open .menu__button--icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
 }
 
 .menu__close {
@@ -689,23 +705,51 @@ img {
 
 .footer {
   background-color: #2f303a;
-  width: 100%;
 }
 
 .footer__logo-in {
-  grid-area: first;
+  margin-bottom: 60px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1200px) {
   .footer__logo-in {
-    margin-bottom: 60px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__logo-in {
+    margin-bottom: 0;
+    margin-right: 70px;
   }
 }
 
 .footer__box {
-  margin: 0 auto 60px auto;
+  margin-bottom: 60px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .footer__box {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__box {
+    margin-bottom: 0;
+    margin-right: 70px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footer__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .footer .wrapper__footer {
@@ -718,7 +762,14 @@ img {
 @media screen and (min-width: 768px) {
   .footer .wrapper__footer {
     flex-direction: row;
-    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .wrapper__footer {
+    flex-direction: row;
+    text-align: start;
   }
 }
 
@@ -737,8 +788,9 @@ img {
 }
 
 .footer__input {
+  max-width: 450px;
   width: 100%;
-  padding: 15px 16px;
+  padding: 14px 16px;
   margin-right: 12px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -747,6 +799,7 @@ img {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
+  margin-bottom: 20px;
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -766,12 +819,6 @@ img {
   .footer__input {
     width: 358px;
   }
-}
-
-.footer__form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .footer__socials {
@@ -797,6 +844,13 @@ img {
 
 .contacts {
   padding: 60px 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 .address {
@@ -831,7 +885,6 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
   padding: 13px 28px;
   width: 200px;
   height: 50px;
@@ -1055,6 +1108,7 @@ img {
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: scroll;
+  z-index: 9;
 }
 
 .backdrop.is-hidden {
@@ -1134,7 +1188,7 @@ img {
 }
 
 .form__input {
-  width: 370px;
+  width: 100%;
   height: 40px;
   margin: 0;
   padding-top: 14px;
@@ -1153,7 +1207,7 @@ img {
 }
 
 .form__textarea {
-  width: 370px;
+  width: 100%;
   height: 120px;
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -1188,11 +1242,17 @@ img {
   top: 50%;
   left: 50%;
   padding: 40px;
-  width: 450px;
-  height: 609px;
+  width: 100%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background: #ffffff;
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
