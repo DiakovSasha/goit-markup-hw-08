@@ -53,8 +53,6 @@
   border: none;
   cursor: pointer;
   z-index: 5;
-  // top: -4px;
-  // right: 28px;
   background-color: transparent;
   @media screen and (min-width: 768px) {
     display: none;
@@ -78,7 +76,6 @@
 .is-open .menu__burger {
   display: none;
 }
-
 .site-nav {
   @media screen and (min-width: 768px) {
     display: flex;
@@ -101,7 +98,6 @@
       margin-right: 50px;
     }
   }
-
   .site-nav__link--certain {
     color: $accent-color;
   }
@@ -116,8 +112,8 @@
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-
     transition: $transition;
+
     @media screen and (max-width: 767px) {
       font-size: 40px;
       line-height: 47px;
