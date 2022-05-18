@@ -45,15 +45,17 @@
 }
 
 .menu {
-  position: absolute;
+  position: fixed;
+  top: 11px;
+  right: 25px;
   display: flex;
 
   padding: 0;
   border: none;
   cursor: pointer;
   z-index: 5;
-  top: -4px;
-  right: 28px;
+  // top: -4px;
+  // right: 28px;
   background-color: transparent;
   @media screen and (min-width: 768px) {
     display: none;
@@ -64,8 +66,8 @@
   }
   &.is-open .menu__button--icon {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 11px;
+    right: 25px;
   }
 }
 
