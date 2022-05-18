@@ -76,18 +76,20 @@
 .is-open .menu__burger {
   display: none;
 }
-.site-nav {
+.nav {
   @media screen and (min-width: 768px) {
-    display: flex;
     margin-bottom: 0;
-    margin-left: 88px;
+
     margin-right: 70px;
   }
   @media screen and(min-width:1200px) {
-    margin-left: 93px;
-    margin-right: 280px;
+    margin-right: 300px;
   }
-
+}
+.site-nav {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
   @media screen and(max-width:767px) {
     &__item:not(:last-child) {
       margin-right: 32px;
@@ -205,12 +207,12 @@
     color: $accent-color;
   }
   &__link--mail {
+    color: #757575;
     @media screen and (max-width: 767px) {
       font-size: 24px;
       line-height: 28px;
       letter-spacing: 0.02em;
       font-weight: 500;
-      color: #757575;
     }
 
     @media screen and (min-width: 768px) {
