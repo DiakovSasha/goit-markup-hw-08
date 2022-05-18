@@ -2,7 +2,8 @@
 .hero {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 118px 60px;
+  padding: 118px 0;
+
   @media screen and (min-width: 768px) {
     padding: 200px 0;
   }
