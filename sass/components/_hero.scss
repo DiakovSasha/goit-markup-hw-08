@@ -1,9 +1,9 @@
 /* Герой */
 .hero {
-  margin: 0 auto;
   max-width: 1600px;
-
+  margin: 0 auto;
   padding: 118px 60px;
+
   text-align: center;
   background-image: linear-gradient(
       to right,
@@ -65,20 +65,17 @@
       url(../images/hero/herodesk2x.jpg);
   }
   &__title {
-    color: $white-color;
+    margin-bottom: 30px;
     font-weight: 900;
     font-size: 26px;
     line-height: 1.6;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    margin-bottom: 30px;
+    color: $white-color;
     @media screen and (min-width: 1200px) {
       font-size: 44px;
       line-height: 1.36;
-      /* or 136% */
-
-      letter-spacing: 0.06em;
     }
   }
 }

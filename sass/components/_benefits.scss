@@ -1,12 +1,14 @@
 /* Преимущества */
 .benefits {
   &__title {
-    text-align: center;
     margin-bottom: 10px;
+
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
+    text-align: center;
     text-transform: uppercase;
+
     @media screen and (min-width: 768px) {
       text-align: start;
     }
@@ -14,6 +16,7 @@
   &__text {
     font-size: 14px;
     line-height: 1.71;
+
     color: $secondary-text-color;
   }
   &__list {
