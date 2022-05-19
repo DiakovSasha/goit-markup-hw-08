@@ -6,14 +6,14 @@
     display: flex;
     flex-wrap: wrap;
 
-    @media screen and (max-width: 767px) {
+    @include mq(mob-only) {
     }
 
-    @media screen and (min-width: 768px) {
+    @include mq(tab) {
       margin-bottom: 15px;
       justify-content: center;
     }
-    @media screen and (min-width: 1200px) {
+    @include mq(desk) {
       margin-bottom: 35px;
     }
   }
@@ -66,20 +66,20 @@
     grid-template-columns: repeat(1, auto);
     gap: 30px;
     padding: 0;
-    @media screen and(min-width:768px) {
+    @include mq(tab) {
       grid-template-columns: repeat(2, auto);
     }
-    @media screen and(min-width:1200px) {
+    @include mq(desk) {
       grid-template-columns: repeat(3, auto);
     }
   }
   &__item {
     border: 1px Solid #eeeeee;
     max-width: 450px;
-    @media screen and(min-width:768px) {
+    @include mq(tab) {
       width: 354px;
     }
-    @media screen and(min-width:1200px) {
+    @include mq(desk) {
       width: 370px;
     }
   }

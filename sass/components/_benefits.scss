@@ -9,7 +9,7 @@
     text-align: center;
     text-transform: uppercase;
 
-    @media screen and (min-width: 768px) {
+    @include mq(tab) {
       text-align: start;
     }
   }
@@ -22,19 +22,19 @@
   &__list {
     display: grid;
     gap: 30px;
-    @media screen and (min-width: 768px) {
+    @include mq(tab) {
       grid-template-columns: 1fr 1fr;
     }
-    @media screen and (min-width: 1200px) {
+    @include mq(desk) {
       width: 270px;
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
   }
   &__item {
     width: 100%;
-    @media screen and (min-width: 768px) {
+    @include mq(tab) {
       width: 354px;
-      @media screen and (min-width: 1200px) {
+      @include mq(desk) {
         width: 270px;
       }
     }

@@ -5,7 +5,7 @@
   padding: 118px 0;
   text-align: center;
 
-  @media screen and (min-width: 1200px) {
+  @include mq(desk) {
     padding: 200px 0;
   }
 
@@ -18,10 +18,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and (-webkit-min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
+  @include mq(retina) {
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
@@ -29,7 +26,7 @@
       ),
       url(../images/hero/heromobile2x.jpg);
   }
-  @media screen and (min-width: 481px) {
+  @include mq(tab) {
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
@@ -37,10 +34,7 @@
       ),
       url(../images/hero/herotablet1x.jpg);
   }
-  @media screen and (min-width: 481px) and (min-device-pixel-ratio: 2),
-    screen and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2),
-    screen and (min-width: 481px) and (min-resolution: 192dpi),
-    screen and (min-width: 481px) and (min-resolution: 2dppx) {
+  @include mq(retina) {
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
@@ -48,7 +42,7 @@
       ),
       url(../images/hero/herotablet2x.jpg);
   }
-  @media screen and (min-width: 769px) {
+  @include mq(desk) {
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
@@ -56,10 +50,7 @@
       ),
       url(../images/hero/herodesk1x.jpg);
   }
-  @media screen and (min-width: 769px) and (min-device-pixel-ratio: 2),
-    screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2),
-    screen and (min-width: 769px) and (min-resolution: 192dpi),
-    screen and (min-width: 769px) and (min-resolution: 2dppx) {
+  @include mq(retina) {
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),

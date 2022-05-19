@@ -2,10 +2,10 @@
   background-color: #2f303a;
   &__logo-in {
     margin-bottom: 60px;
-    @media screen and (max-width: 1200px) {
+    @include mq(no-desk) {
       width: 100%;
     }
-    @media screen and (min-width: 1200px) {
+    @include mq(desk) {
       margin-bottom: 0;
       margin-right: 70px;
     }
@@ -15,17 +15,17 @@
 
     flex-direction: column;
     align-items: center;
-    @media screen and (max-width: 1200px) {
+    @include mq(no-desk) {
       display: flex;
       width: 100%;
     }
-    @media screen and (min-width: 1200px) {
+    @include mq(desk) {
       margin-bottom: 0;
       margin-right: 70px;
     }
   }
   &__form {
-    @media screen and (max-width: 1200px) {
+    @include mq(no-desk) {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -38,13 +38,12 @@
     align-items: center;
     text-align: center;
 
-    @media screen and (min-width: 768px) {
+    @include mq(tab) {
       flex-direction: row;
       align-items: baseline;
     }
-    @media screen and (min-width: 1200px) {
+    @include mq(desk) {
       flex-direction: row;
-
       text-align: start;
     }
   }
@@ -79,14 +78,14 @@
     border-radius: 4px;
 
     color: rgba(255, 255, 255, 0.6);
-    @media screen and (min-width: 480px) {
+    @include mq(mob) {
       width: 450px;
     }
-    @media screen and (max-width: 767px) {
+    @include mq(tab-only) {
       margin-bottom: 20px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include mq(desk) {
       width: 358px;
     }
   }
@@ -115,7 +114,7 @@
 }
 .contacts {
   padding: 60px 0;
-  @media screen and (min-width: 1200px) {
+  @include mq(desk) {
     display: flex;
     align-items: baseline;
   }
